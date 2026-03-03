@@ -90,32 +90,4 @@
 };
 
 
-/* --- 末尾の追記部分をこれに差し替え --- */
-
-&pointing_listener {
-    status = "okay";
-    input-processors = <&zip_xy_scaler 1 1>;
-};
-
-/* ラベルを使わず、デバイスツリーのパスで直接指定します */
-/ {
-    trackball_settings_override {
-        compatible = "zmk,input-processor-scaler";
-        #/* ダミーのノードですが、ここに設定を流し込みます */
-    };
-};
-
-/* Snippetで定義されるはずのノードをパス指定で上書き */
-&{/pointing_listener} {
-    input-processors = <&zip_xy_scaler 1 1>;
-};
-
-/* スクロール設定を「特定の名前」に頼らず適用させるため、listener側を調整します */
-&pointing_listener {
-    scroller {
-        /* レイヤー5の時だけスクロールを有効化 */
-        layers = <5>;
-        input-processors = <&zip_xy_to_scroll>;
-    };
-};
 
