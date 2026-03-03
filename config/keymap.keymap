@@ -89,7 +89,6 @@
     };
 };
 
-/* --- ここから追記 --- */
 
 &pointing_listener {
     status = "okay";
@@ -103,4 +102,3 @@
     scroll-layers = <5>;
 };
 
-/* --- ここまで追記 --- */
