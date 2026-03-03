@@ -92,13 +92,12 @@
 
 &pointing_listener {
     status = "okay";
-    /* ボールを動かした時にレイヤー1 (MOUSE) へ飛ぶ設定を上書きして無効化します */
+    /* 自動レイヤー切り替えを無効化 */
     input-processors = <&zip_xy_scaler 1 1>;
 };
 
-&trackball_peripheral {
-    status = "okay";
-    /* レイヤー5 (SCROLL) にいる時だけ、ボールの動きをホイール操作に変換します */
+&pointing_device {
+    /* レイヤー5 (SCROLL) にいる時だけスクロール動作にする */
     scroll-layers = <5>;
 };
 
