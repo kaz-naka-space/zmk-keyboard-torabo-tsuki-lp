@@ -93,12 +93,10 @@
 /* --- ファイル末尾 --- */
 
 &{/pointing_listener} {
-    /* 自動レイヤー移動を無効化 */
-    input-processors = <&zip_xy_scaler 1 1>;
-
-    /* スクロール設定を定義 (zip_xy_to_scroll を zip_scroll_scaler に変更) */
-    scroll_view {
+    /* 既存の（反転などを防ぐ）設定を維持したまま、スクロール設定だけを「追加」します */
+    scroller {
         layers = <5>;
+        /* 前回のビルドで通った zip_scroll_scaler 形式、またはパス指定を試します */
         input-processors = <&zip_scroll_scaler 1 1>;
     };
 };
