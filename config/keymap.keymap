@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/input_transform.h>  /* ← これを忘れずに追加！ */
 
 / {
     combos {
@@ -89,5 +90,17 @@
     };
 };
 
+/* --- ファイル末尾 --- */
 
+/* input-listenerスニペットが作成するノードを直接指定 */
+&{/pointing_listener} {
+    /* 1. 自動マウスレイヤー機能を上書きして無効化 */
+    input-processors = <&zip_xy_scaler 1 1>;
+
+    /* 2. スクロールレイヤー(5番)の設定を定義 */
+    scroller {
+        layers = <5>;
+        input-processors = <&zip_xy_to_scroll>;
+    };
+};
 
