@@ -92,15 +92,14 @@
 
 /* --- ファイル末尾 --- */
 
-/* input-listenerスニペットが作成するノードを直接指定 */
 &{/pointing_listener} {
-    /* 1. 自動マウスレイヤー機能を上書きして無効化 */
+    /* 自動レイヤー移動を無効化 */
     input-processors = <&zip_xy_scaler 1 1>;
 
-    /* 2. スクロールレイヤー(5番)の設定を定義 */
-    scroller {
+    /* スクロール設定を定義 (zip_xy_to_scroll を zip_scroll_scaler に変更) */
+    scroll_view {
         layers = <5>;
-        input-processors = <&zip_xy_to_scroll>;
+        input-processors = <&zip_scroll_scaler 1 1>;
     };
 };
 
