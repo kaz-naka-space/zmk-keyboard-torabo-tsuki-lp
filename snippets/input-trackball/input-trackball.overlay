@@ -16,16 +16,3 @@
         power-gpios = <&gpio0 8 (GPIO_ACTIVE_HIGH | NRF_GPIO_DRIVE_H0H1)>;
     };
 };
-
-/* ここに「スケーラー（倍率）」の設定があるか、追加します */
-/ {
-    /* 移動量を 1/2 に制限する設定 */
-    zip_xy_scaler: zip_xy_scaler {
-        compatible = "zmk,input-processor-scaler";
-        #input-processor-cells = <2>;
-        type = <INPUT_EV_REL>;
-        codes = <INPUT_REL_X INPUT_REL_Y>;
-        mul = <1>; // 分子
-        div = <2>; // 分母 (2にすると速度が半分になります)
-    };
-};
