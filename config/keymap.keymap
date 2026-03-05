@@ -105,19 +105,17 @@
 
 /* --- ファイル末尾 --- */
 
-/* 1. 速度を調整する「スケーラー」の定義を追加 */
-/*
 / {
     zip_xy_scaler: zip_xy_scaler {
         compatible = "zmk,input-processor-scaler";
         #input-processor-cells = <2>;
         type = <INPUT_EV_REL>;
         codes = <INPUT_REL_X INPUT_REL_Y>;
-        mul = <1>; 
-        div = <2>; /* ここを「2」にすると速度が半分、「3」にすると1/3になります */
+        /* mul → multiplier, div → denominator に修正 */
+        multiplier = <1>; 
+        denominator = <2>; 
     };
 };
-*/
 
 &{/pointing_listener} {
     /* 2. 通常のカーソル移動（全レイヤー共通）にスケーラーを適用 */
