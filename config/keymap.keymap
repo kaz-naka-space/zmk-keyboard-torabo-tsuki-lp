@@ -106,6 +106,7 @@
 /* --- ファイル末尾 --- */
 
 /* 1. 速度を調整する「スケーラー」の定義を追加 */
+/*
 / {
     zip_xy_scaler: zip_xy_scaler {
         compatible = "zmk,input-processor-scaler";
@@ -116,10 +117,11 @@
         div = <2>; /* ここを「2」にすると速度が半分、「3」にすると1/3になります */
     };
 };
+*/
 
 &{/pointing_listener} {
     /* 2. 通常のカーソル移動（全レイヤー共通）にスケーラーを適用 */
-    input-processors = <&zip_xy_scaler 1 2>;
+    /*input-processors = <&zip_xy_scaler 1 2>;*/
 
     /* 既存の（反転などを防ぐ）設定を維持したまま、スクロール設定だけを「追加」します */
 
