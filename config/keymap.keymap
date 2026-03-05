@@ -110,9 +110,9 @@
 
     scroller {
         layers = <5>;
-
-        /* 前回のビルドで通った zip_scroll_scaler 形式、またはパス指定を試します */
-
-        input-processors = <&zip_scroll_scaler 1 1>;
+        input-processors = <
+            &zip_xy_to_scroll_mapper
+            &zip_scroll_scaler 2 3
+        >;
     };
 };
