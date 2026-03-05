@@ -122,7 +122,10 @@
 &{/pointing_listener} {
     /* 2. 通常のカーソル移動（全レイヤー共通）にスケーラーを適用 */
     /*input-processors = <&zip_xy_scaler 1 2>;*/
-    input-processors = <&zip_xy_scaler 3 2>;
+    input-processors = <
+        &zip_xy_to_scroll_mapper
+        &zip_xy_scaler 2 3
+    >;
 
     /* 既存の（反転などを防ぐ）設定を維持したまま、スクロール設定だけを「追加」します */
 
