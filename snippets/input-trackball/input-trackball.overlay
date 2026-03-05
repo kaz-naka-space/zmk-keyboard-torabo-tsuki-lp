@@ -14,5 +14,9 @@
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 19 GPIO_ACTIVE_LOW>;
         power-gpios = <&gpio0 8 (GPIO_ACTIVE_HIGH | NRF_GPIO_DRIVE_H0H1)>;
+
+        /* --- ここを追記 --- */
+        /* 数値を小さくすると遅くなります。デフォルトは800か1000程度が多いです。 */
+        res-hyphen-dist = <600>;
     };
 };
