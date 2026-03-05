@@ -1,8 +1,18 @@
+#include <dt-bindings/zmk/input_transform.h>  /* ← これを忘れずに追加！ */
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/input_transform.h>  /* ← これを忘れずに追加！ */
+
+&mt {
+    quick-tap-ms = <300>;
+    flavor = "balanced";
+};
+
+&lt {
+    quick-tap-ms = <300>;
+    flavor = "balanced";
+};
 
 / {
     combos {
@@ -94,10 +104,12 @@
 
 &{/pointing_listener} {
     /* 既存の（反転などを防ぐ）設定を維持したまま、スクロール設定だけを「追加」します */
+
     scroller {
         layers = <5>;
+
         /* 前回のビルドで通った zip_scroll_scaler 形式、またはパス指定を試します */
+
         input-processors = <&zip_scroll_scaler 1 1>;
     };
 };
-
