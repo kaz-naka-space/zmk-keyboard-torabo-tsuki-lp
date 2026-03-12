@@ -65,11 +65,11 @@
 
         SYMBOL_JIS {
             bindings = <
-&trans  &trans            &trans        &trans      &trans                   &trans                             &trans         &trans                   &trans         &trans            &trans         &trans
-&trans  &kp EXCLAMATION   &kp QUESTION  &kp CARET   &kp LS(INTERNATIONAL_3)  &kp RIGHT_BRACE                    &kp PIPE       &kp AT_SIGN              &kp AMPERSAND  &kp LEFT_BRACE    &kp EQUAL      &trans
-&trans  &kp LEFT_BRACKET  &kp HASH      &kp DOLLAR  &kp INT_RO               &kp LS(N8)         &trans  &trans  &kp LS(N9)     &trans                   &trans         &kp SINGLE_QUOTE  &kp SEMICOLON  &trans
-&trans  &trans            &trans        &trans      &trans                   &kp RIGHT_BRACKET  &trans  &trans  &kp BACKSLASH  &kp LS(INTERNATIONAL_1)  &kp COMMA      &kp PERIOD        &kp SLASH      &trans
-&trans  &trans            &trans        &trans      &trans                   &trans             &trans  &trans  &trans         &trans                   &trans         &trans            &trans         &trans
+&trans  &trans            &trans        &trans      &trans                   &trans                             &trans         &trans                   &trans         &trans            &trans                 &trans
+&trans  &kp EXCLAMATION   &kp QUESTION  &kp CARET   &kp LS(INTERNATIONAL_3)  &kp RIGHT_BRACE                    &kp PIPE       &kp AT_SIGN              &kp AMPERSAND  &kp LEFT_BRACE    &kp EQUAL              &trans
+&trans  &kp LEFT_BRACKET  &kp HASH      &kp DOLLAR  &kp INT_RO               &kp LS(N8)         &trans  &trans  &kp LS(N9)     &trans                   &trans         &kp SINGLE_QUOTE  &kp SEMICOLON          &trans
+&trans  &trans            &trans        &trans      &trans                   &kp RIGHT_BRACKET  &trans  &trans  &kp BACKSLASH  &kp LS(INTERNATIONAL_1)  &kp COMMA      &kp PERIOD        &mt RIGHT_SHIFT SLASH  &trans
+&trans  &trans            &trans        &trans      &trans                   &trans             &trans  &trans  &trans         &trans                   &trans         &trans            &trans                 &trans
             >;
         };
 
